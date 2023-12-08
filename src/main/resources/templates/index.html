@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign PDF</title>
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/dropzone.js"></script>
+</head>
+<body>
+<div class="modal">
+    <div class="modal-body">
+        <h2 class="modal-title">Sign PDF file</h2>
+        <p class="modal-description">Attach the file below</p>
+        <form th:action="@{/upload}" class="upload-area fileuploader" id="zdrop" method="post">
+			<span class="upload-area-icon">
+                <div class="text-center text-secondary"><i class="fas fa-file-pdf"></i></div>
+			</span>
+            <span class="upload-area-title">Drag file(s) here to upload.</span>
+            <span class="upload-area-description">
+                <strong>or</strong>
+			</span>
+            <button type="button" class="btn-primary" id="upload-label">Browse Files</button>
+<!--            <input type="hidden" name="csrf" th:value="${_csrf.token}"/>-->
+        </form>
+    </div>
+<!--    <div class="modal-footer">-->
+<!--        <button class="btn-primary">Upload File</button>-->
+<!--    </div>-->
+    <!-- Preview collection of uploaded documents -->
+    <div class="preview-container">
+        <div>File Uploaded</div>
+        <div class="collection card" id="previews">
+            <div class="collection-item clearhack valign-wrapper item-template" id="zdrop-template">
+                <div class="left pv zdrop-info" data-dz-thumbnail>
+                    <div class="d-flex">
+                        <span data-dz-name></span> <span data-dz-size></span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar">
+                            <div class="determinate"></div>
+                        </div>
+                    </div>
+                    <div class="dz-success-message"><span data-dz-successmessage></span></div>
+                    <div class="dz-error-message"><span data-dz-errormessage></span></div>
+                </div>
+                <div class="secondary-content actions">
+                    <a href="#!" data-dz-remove class="btn-floating ph red white-text waves-effect waves-light"><i class="fas fa-xmark white-text"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-view">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>PDF Signed Successfully!</h2>
+        <p><strong>Please don't rename the file</strong>, because to verify the signature you need signed filename</p>
+        <p>Your file will automatically deleted within 1 hour</p>
+        <button class="download" disabled> Download </button>
+        <p class="download-message">You can re-download the file in <span id="countdown">10</span> seconds.</p>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/dropzone.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
