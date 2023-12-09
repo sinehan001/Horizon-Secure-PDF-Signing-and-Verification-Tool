@@ -24,7 +24,7 @@ Make sure your system meets the following requirements:
 1. Clone the Horizon repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/horizon-pdf-signing.git
+   git clone https://github.com/sinehan001/Horizon-Secure-PDF-Signing-and-Verification-Tool.git
    cd horizon-pdf-signing
    ```
 
@@ -49,7 +49,7 @@ Visit http://localhost:8080 in your web browser.
 
  3. Search **Git** in the Toolbar (or) Search **Help -> Git** in Toolbar 
 
- 4. Find the **GitHub -> Create Pull Request**, then Enter the Git URL - https://github.com/your-username/horizon-pdf-signing.git, click OK, Then click on Create Pull Request.
+ 4. Find the **GitHub -> Create Pull Request**, then Enter the Git URL - https://github.com/sinehan001/Horizon-Secure-PDF-Signing-and-Verification-Tool.git, click OK, Then click on Create Pull Request.
 
  5. Once, all files has been pulled from GitHub, Click the **Maven** tab, which is located top right side of the page.
 
